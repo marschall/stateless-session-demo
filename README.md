@@ -17,7 +17,7 @@ java.lang.ClassCastException: class org.springframework.orm.jpa.EntityManagerHol
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
 	at com.acme.stateless.session.demo.CityService$$SpringCGLIB$$0.existsCity42(<generated>) ~[classes/:na]
-	at com.acme.stateless.session.demo.CityController.exists(CityController.java:18) ~[classes/:na]
+	at com.acme.stateless.session.demo.CityController.exists(CityController.java:20) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
