@@ -11,7 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class City implements Serializable {
+public class State implements Serializable {
 
     @Id
     @GeneratedValue
@@ -20,10 +20,7 @@ public class City implements Serializable {
     @Column(nullable = false)
     private String name;
 
-    @ManyToOne(fetch = LAZY, optional = false)
-    private State state;
-
-    protected City() {
+    protected State() {
         // no-args constructor required by JPA spec
     }
 
@@ -33,14 +30,6 @@ public class City implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public State getState() {
-        return state;
-    }
-
-    public void setState(State state) {
-        this.state = state;
     }
 
 }

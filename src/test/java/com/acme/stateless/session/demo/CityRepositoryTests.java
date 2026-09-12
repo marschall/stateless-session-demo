@@ -1,16 +1,14 @@
 package com.acme.stateless.session.demo;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
-import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
-
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-@EnableAutoConfiguration
-@SpringJUnitConfig(ApplicationConfiguration.class)
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+import org.springframework.context.annotation.Import;
+
 @DataJpaTest
+@Import(PersistenceConfiguration.class)
 class CityRepositoryTests {
 
     @Autowired
