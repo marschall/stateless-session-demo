@@ -20,8 +20,8 @@ public class City implements Serializable {
     @Column(nullable = false)
     private String name;
 
-    @ManyToOne(fetch = LAZY, optional = false)
-    private State state;
+    @Column(nullable = false)
+    private String state;
 
     protected City() {
         // no-args constructor required by JPA spec
@@ -35,11 +35,11 @@ public class City implements Serializable {
         this.name = name;
     }
 
-    public State getState() {
+    public String getState() {
         return state;
     }
 
-    public void setState(State state) {
+    public void setState(String state) {
         this.state = state;
     }
 

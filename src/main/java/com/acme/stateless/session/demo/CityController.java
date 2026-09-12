@@ -19,13 +19,6 @@ public class CityController {
     public String exists() {
         return Boolean.toString(this.cityService.existsCity(42L));
     }
-    
-    @ResponseBody
-    @GetMapping(value = "/lazy", produces = MediaType.TEXT_PLAIN_VALUE)
-    public String lazy() {
-        long cityId = this.cityService.insertCityAndStateAndReturnCityId();
-        var city = this.cityService.getCity(cityId);
-        return city.getState().getName();
-    }
+
 
 }
